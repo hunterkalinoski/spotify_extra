@@ -25,12 +25,13 @@ class Home extends HookConsumerWidget {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Theme.of(context).primaryColor,
+        showUnselectedLabels: true,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Text('Analyze'),
             activeIcon: Text('Active'),
             label: 'analyze',
-            backgroundColor: Colors.blue,
           ),
           BottomNavigationBarItem(
             icon: Text('Shazam'),

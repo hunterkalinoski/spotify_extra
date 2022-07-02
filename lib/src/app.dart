@@ -10,6 +10,10 @@ class MyApp extends HookConsumerWidget {
     return MaterialApp(
       title: 'Spotify Extra',
       home: Home(),
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        primaryColor: const Color.fromRGBO(29, 185, 84, 100),
+      ),
     );
   }
 }

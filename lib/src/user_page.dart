@@ -6,8 +6,11 @@ class UserPage extends HookConsumerWidget {
   const UserPage({super.key});
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return const Center(
-      child: Text('User Page'),
+    return Container(
+      color: const Color.fromRGBO(0, 0, 50, 100),
+      child: const Center(
+        child: Text('User Page'),
+      ),
     );
   }
 }

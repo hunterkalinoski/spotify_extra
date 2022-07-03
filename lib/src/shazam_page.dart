@@ -6,8 +6,11 @@ class ShazamPage extends HookConsumerWidget {
   const ShazamPage({super.key});
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return const Center(
-      child: Text('Shazam Page'),
+    return Container(
+      color: const Color.fromRGBO(0, 50, 0, 100),
+      child: const Center(
+        child: Text('Shazam Page'),
+      ),
     );
   }
 }

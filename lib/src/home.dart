@@ -4,7 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'analyze_page.dart';
 import 'global_page.dart';
 import 'home_page_base.dart';
-import 'shazam_page.dart';
+import 'search_page.dart';
 import 'user_page.dart';
 
 class CurrentPageNotifier extends StateNotifier<int> {
@@ -75,7 +75,7 @@ class Home extends HookConsumerWidget {
           BottomNavigationBarItem(
             icon: Icon(Icons.star_border_outlined),
             activeIcon: Icon(Icons.star),
-            label: 'shazam',
+            label: 'search',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.star_border_outlined),

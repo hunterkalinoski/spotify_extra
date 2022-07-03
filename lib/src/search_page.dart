@@ -9,7 +9,7 @@ class ShazamPage extends HookConsumerWidget {
     return Container(
       color: const Color.fromRGBO(0, 50, 0, 100),
       child: const Center(
-        child: Text('Shazam Page'),
+        child: Text('Search Page'),
       ),
     );
   }

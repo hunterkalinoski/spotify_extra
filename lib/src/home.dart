@@ -56,33 +56,42 @@ class Home extends HookConsumerWidget {
           HomePageBase(child: GlobalPage()),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Theme.of(context).primaryColor,
-        showUnselectedLabels: true,
-        currentIndex: currentPage,
-        onTap: bottomNavigationBarItemClicked,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.star_border_outlined),
-            activeIcon: Icon(Icons.star),
-            label: 'user',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.star_border_outlined),
-            activeIcon: Icon(Icons.star),
-            label: 'analyze',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.star_border_outlined),
-            activeIcon: Icon(Icons.star),
-            label: 'search',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.star_border_outlined),
-            activeIcon: Icon(Icons.star),
-            label: 'global',
-          ),
-        ],
+      bottomNavigationBar: Theme(
+        data: ThemeData.dark().copyWith(
+          canvasColor: const Color.fromARGB(255, 10, 10, 10),
+        ),
+        child: BottomNavigationBar(
+          selectedItemColor: Theme.of(context).primaryColor,
+          showUnselectedLabels: true,
+          currentIndex: currentPage,
+          onTap: bottomNavigationBarItemClicked,
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.star_border_outlined),
+              activeIcon: Icon(Icons.star),
+              label: 'user',
+              tooltip: '',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.star_border_outlined),
+              activeIcon: Icon(Icons.star),
+              label: 'analyze',
+              tooltip: '',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.star_border_outlined),
+              activeIcon: Icon(Icons.star),
+              label: 'search',
+              tooltip: '',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.star_border_outlined),
+              activeIcon: Icon(Icons.star),
+              label: 'global',
+              tooltip: '',
+            ),
+          ],
+        ),
       ),
     );
   }

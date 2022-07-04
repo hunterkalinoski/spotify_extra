@@ -7,7 +7,7 @@ class GlobalPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Container(
-      color: const Color.fromRGBO(50, 0, 50, 100),
+      color: const Color.fromRGBO(0, 20, 0, 100),
       child: const Center(
         child: Text('Global Page'),
       ),

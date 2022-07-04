@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import 'analyze_page.dart';
-import 'global_page.dart';
-import 'home_page_base.dart';
-import 'search_page.dart';
-import 'user_page.dart';
+import '../analyze/analyze_page.dart';
+import '../global/global_page.dart';
+import '../search/search_page.dart';
+import '../user/user_page.dart';
+import 'home_page_child_base.dart';
 
 class CurrentPageNotifier extends StateNotifier<int> {
   CurrentPageNotifier() : super(0);
@@ -22,7 +22,6 @@ class CurrentPageNotifier extends StateNotifier<int> {
   set pageNumber(int pageNumber) => state = pageNumber;
 }
 
-// ignore: always_specify_types
 final currentPageProvider = StateNotifierProvider<CurrentPageNotifier, int>((ref) {
   return CurrentPageNotifier();
 });
@@ -49,11 +48,11 @@ class Home extends HookConsumerWidget {
       body: PageView(
         onPageChanged: (int index) => pageChanged(index),
         controller: pageController,
-        children: const <Widget>[
-          HomePageBase(child: UserPage()),
-          HomePageBase(child: AnalyzePage()),
-          HomePageBase(child: ShazamPage()),
-          HomePageBase(child: GlobalPage()),
+        children: const <HomePageChildBase>[
+          HomePageChildBase(child: AnalyzePage()),
+          HomePageChildBase(child: UserPage()),
+          HomePageChildBase(child: SearchPage()),
+          HomePageChildBase(child: GlobalPage()),
         ],
       ),
       bottomNavigationBar: Theme(
@@ -69,13 +68,13 @@ class Home extends HookConsumerWidget {
             BottomNavigationBarItem(
               icon: Icon(Icons.star_border_outlined),
               activeIcon: Icon(Icons.star),
-              label: 'user',
+              label: 'analyze',
               tooltip: '',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.star_border_outlined),
               activeIcon: Icon(Icons.star),
-              label: 'analyze',
+              label: 'user',
               tooltip: '',
             ),
             BottomNavigationBarItem(

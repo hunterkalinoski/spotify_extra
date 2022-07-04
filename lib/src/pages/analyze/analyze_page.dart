@@ -7,7 +7,7 @@ class AnalyzePage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Container(
-      color: const Color.fromRGBO(0, 10, 0, 100),
+      color: const Color.fromRGBO(0, 5, 0, 100),
       child: const Center(
         child: Text('Analyze Page'),
       ),

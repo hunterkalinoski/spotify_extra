@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class HomePageBase extends HookConsumerWidget {
-  const HomePageBase({super.key, required this.child});
+class HomePageChildBase extends HookConsumerWidget {
+  const HomePageChildBase({super.key, required this.child});
   final Widget child;
 
   @override

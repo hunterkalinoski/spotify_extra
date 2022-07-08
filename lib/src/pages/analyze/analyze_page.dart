@@ -18,6 +18,12 @@ class AnalyzePage extends HookConsumerWidget {
   // for getting data, follow my python script's methods,
   void analyzeButtonPressed() {}
 
+  // function for onsubmit needs a string param, so this just redirects
+  // maybe make pressing the button call this function
+  void textFieldSubmitted(String value) {
+    analyzeButtonPressed();
+  }
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Container(
@@ -34,6 +40,8 @@ class AnalyzePage extends HookConsumerWidget {
             ),
             const Padding(padding: EdgeInsets.symmetric(vertical: 10)),
             TextField(
+              textInputAction: TextInputAction.go,
+              onSubmitted: (value) => textFieldSubmitted(value),
               textAlign: TextAlign.center,
               keyboardType: TextInputType.multiline,
               maxLines: null,

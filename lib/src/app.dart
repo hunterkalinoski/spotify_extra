@@ -19,6 +19,7 @@ class MyApp extends HookConsumerWidget {
           splashColor: spotify_green,
           highlightColor: spotify_green,
           colorScheme: const ColorScheme.dark().copyWith(
+            primary: spotify_green,
             secondary: spotify_green,
           ),
         ),

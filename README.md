@@ -9,6 +9,12 @@ If anyone decides to download the source code, it will not work straight away.
 You must first create an app on your spotify developer dashboard,
 then enter your app credentials into this file: lib\src\shared\spotify_credentials.dart
 
+For anyone forking, put your credentials in and then do
+
+`git update-index --assume-unchanged lib/src/shared/spotify_credentials.dart`
+
+This will allow you to keep your credentials in your local repo while the remote file stays unchanged
+
 ## Overview
 
 Gives you access to some features of the spotify api that aren't available in the spotify app.

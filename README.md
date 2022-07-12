@@ -2,6 +2,13 @@
 
 An app that provides extra functionality for spotify users.
 
+## Usage
+
+If anyone decides to download the source code, it will not work straight away.
+
+You must first create an app on your spotify developer dashboard,
+then enter your app credentials into this file: lib\src\shared\spotify_credentials.dart
+
 ## Overview
 
 Gives you access to some features of the spotify api that aren't available in the spotify app.

@@ -5,30 +5,12 @@ import '../analyze/analyze_page.dart';
 import '../global/global_page.dart';
 import '../search/search_page.dart';
 import '../user/user_page.dart';
+import 'current_page_provider.dart';
 import 'home_page_child_base.dart';
 
-class CurrentPageNotifier extends StateNotifier<int> {
-  CurrentPageNotifier() : super(0);
-
-  void nextPage() {
-    state++;
-  }
-
-  void previousPage() {
-    state--;
-  }
-
-  int get pageNumber => state;
-  set pageNumber(int pageNumber) => state = pageNumber;
-}
-
-final currentPageProvider = StateNotifierProvider<CurrentPageNotifier, int>((ref) {
-  return CurrentPageNotifier();
-});
-
-/// this class contains the pageview and controller that allow navigation
 class Home extends HookConsumerWidget {
   Home({super.key});
+
   final PageController pageController = PageController();
 
   @override

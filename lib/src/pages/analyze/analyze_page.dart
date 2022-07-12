@@ -1,10 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:spotify/spotify.dart';
+
+import '../../shared/spotify_provider.dart';
 
 // TODO: add a help (?) button that will inform users about how to get the playlist/track url
 /// this page is where the analyzing stuff will be done (analyze song/playlist)
-class AnalyzePage extends HookConsumerWidget {
+
+class AnalyzePage extends StatefulHookConsumerWidget {
   const AnalyzePage({super.key});
+
+  @override
+  AnalyzePageState createState() => AnalyzePageState();
+}
+
+class AnalyzePageState extends ConsumerState<AnalyzePage> {
+  late final SpotifyApi spotify;
+
+  @override
+  void initState() {
+    super.initState();
+    spotify = ref.read(spotifyProvider);
+  }
 
   // TODO:
   // validate the url is the correct form,
@@ -25,7 +42,7 @@ class AnalyzePage extends HookConsumerWidget {
   }
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     return Container(
       color: const Color.fromRGBO(0, 5, 0, 100),
       child: Padding(
